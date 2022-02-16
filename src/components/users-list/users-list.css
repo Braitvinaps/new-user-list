@@ -1,0 +1,37 @@
+
+.users-list {
+   padding: 5px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.list-title {
+    text-align: left;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 97%;
+    table-layout: fixed;
+}
+
+.btn-th {
+    width: 0;
+}
+
+button {
+    border-style: none;
+    background-color: white;
+}
+
+tr {
+    border-bottom: 1px solid rgb(216, 212, 212);
+}
+
+th {
+    padding: 10px;;
+}
+
+td {
+    padding: 10px;
+}

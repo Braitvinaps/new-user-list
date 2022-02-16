@@ -1,0 +1,16 @@
+
+.sort-panel {
+    display: inline-block;
+    padding: 0;
+    margin: 5px;
+}
+
+.btn-srt {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+
+.btn-srt:hover {
+    background-color: #ddd;
+}

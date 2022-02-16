@@ -1,0 +1,10 @@
+.btn-del {
+    text-decoration: none;
+    color: black;
+    margin-left: 15vw;
+    width: 100px;
+}
+
+.btn-del:hover {
+    background-color: #ddd;
+}
