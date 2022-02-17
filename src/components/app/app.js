@@ -21,7 +21,7 @@ function App() {
             setLoading(false)
         }
         getUsers()
-    }, [])
+    }, [url])
 
     return (
         <div className="app">
