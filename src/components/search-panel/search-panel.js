@@ -1,4 +1,3 @@
-
 import BtnClear from '../btn-clear/btn-clear';
 import './search-panel.css';
 
@@ -14,7 +13,11 @@ function SearchPanel({ search, setSearch }) {
                     value={search}
                     onChange={event => { setSearch(event.target.value) }} />
             </div>
-            {search ? <BtnClear setSearch={setSearch}/> : <br />}
+            {search ?
+                <BtnClear
+                    setSearch={setSearch}
+                /> :
+                <br />}
         </div>
 
     )

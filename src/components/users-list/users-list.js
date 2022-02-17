@@ -1,30 +1,21 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import SortPanel from '../sort-panel/sort-panel'
 import ListItem from '../list-item/list-item'
 import Pagination from '../pagination/pagination'
 import './users-list.css'
+import Modal from '../modal/modal'
 
-const UsersList = ({ search, sort }) => {
-    const url = `https://5ebbb8e5f2cfeb001697d05c.mockapi.io/users`
+const UsersList = ({ users, setUsers, search, loading }) => {
 
-    const [users, setUsers] = useState([])
-    const [loading, setLoading] = useState(false)
 
     const [changeSort, setChangeSort] = useState(true)
+
+    const [active, setActive] = useState(false)
 
     const [currentPage, setCurrentPage] = useState(1)
     const [dataPerPage] = useState(5)
 
-    useEffect(() => {
-        const getUsers = async () => {
-            setLoading(true)
-            const res = await axios.get(url)
-            setUsers(res.data)
-            setLoading(false)
-        }
-        getUsers()
-    }, [url])
+
 
     // поиск
     const filteredData = users.filter((name) => {
@@ -86,6 +77,28 @@ const UsersList = ({ search, sort }) => {
                 deleteItem={deleteItem}
                 setUsers={setUsers}
             />
+
+            <Modal
+                active={active}
+                setActive={setActive}
+            >
+                
+                <p>Вы уверены, что хотите удалить пользователя?</p>
+
+                <a
+                    className="btn-srt"
+                    href="!#"
+                    // onClick={() => onModal(true)}
+                >Да
+                </a>
+
+                <a
+                    className="btn-srt"
+                    href="!#"
+                    onClick={() => setActive(false)}
+                >Нет
+                </a>
+            </Modal>
 
             <Pagination
                 currentPage={currentPage}

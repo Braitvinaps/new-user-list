@@ -25,7 +25,7 @@ const ListItem = ({ users, loading, deleteItem }) => {
                             }
                             <td>{registration_date.slice(0, 10).split('-').reverse().join('.')}</td>
                             <td>{rating}
-                            <a 
+                                <a
                                     className='btn-del'
                                     href="!#"
                                     onClick={() => deleteItem(id, username)}
