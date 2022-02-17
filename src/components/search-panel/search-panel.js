@@ -17,7 +17,7 @@ function SearchPanel({ search, setSearch }) {
                 <BtnClear
                     setSearch={setSearch}
                 /> :
-                <br />}
+                null}
         </div>
 
     )

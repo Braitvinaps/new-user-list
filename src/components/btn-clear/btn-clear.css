@@ -1,9 +1,12 @@
 .btn-clr {
     text-decoration: none;
     color: black;
-    margin-left: 20px;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
 }
 
 .btn-clr:hover {
-    background-color: #ddd;
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
 }
