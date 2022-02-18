@@ -6,16 +6,12 @@ import './users-list.css'
 import Modal from '../modal/modal'
 
 const UsersList = ({ users, setUsers, search, loading }) => {
-
-
     const [changeSort, setChangeSort] = useState(true)
 
     const [active, setActive] = useState(false)
 
     const [currentPage, setCurrentPage] = useState(1)
     const [dataPerPage] = useState(5)
-
-
 
     // поиск
     const filteredData = users.filter((name) => {

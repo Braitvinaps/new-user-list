@@ -11,3 +11,7 @@
     outline: rgb(178, 236, 214);
     border-radius: 4px;
 }
+
+.text-danger {
+    color: rgb(201, 37, 37);
+}

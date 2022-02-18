@@ -4,10 +4,8 @@ import SearchPanel from '../search-panel/search-panel'
 import UsersList from '../users-list/users-list'
 import './app.css'
 
-
 function App() {
     const url = `https://5ebbb8e5f2cfeb001697d05c.mockapi.io/users`
-
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState(false)
 
@@ -21,7 +19,11 @@ function App() {
             setLoading(false)
         }
         getUsers()
-    }, [url])
+    },[])
+
+    useEffect(() => {
+        document.title = `Список из ${users.length} пользователей`
+    },[users])
 
     return (
         <div className="app">
